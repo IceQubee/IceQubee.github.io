@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+  <body class="bg-primary">
+      <div class="container">
+        <div class="d-flex flex-row mb-3 fixed-top">
+            <a href="#cubathonProject" class="btn btn-block" style="margin-top: 2px;">Cubathon</a>
+            <a href="#5LuikProject" class="btn btn-block" style="margin-top: 2px;">5Luik</a>
+            <button onclick="languageEnglish()">English</button>
+            <button onclick="languageNederlands()">Nederlands</button>
+        </div>
+
+        <div class="row" style="padding-top: 50px">
+          <div class="col text-center border">
+              <img src="Stan.jpg" class="img-fluid rounded" style="max-width:40%">
+              <p class="">Stan van Berkel</p>
+              <p class="">not.my.email@gmail.com</p>
+              <p class="">06-12345678</p>
+          </div>
+
+          <div class="col align-self-center text-center border">
+            <p id="aboutMe">hey, my name is Stan van Berkel. i am 20 years old, Dutch and a software development student at sintlucas. i use this website i made to show off some of the projects i worked on.</p>
+          </div>
+        </div>
+
+        <div id="cubathonProject" class="row border bg-info">
+          <h2 class="text-center" style="padding-bottom: 25px; padding-top: 50px">Cubathon</h2>
+          <img src="Cubathon.png" class="img-fluid rounded" style="max-width:100%">
+          <p id="cubathonContext" class="text-center" style="padding-bottom: 10px; padding-top: 10px">Cubathon is a 3D platform obstacle course game i made to learn how to work with unity.</p>
+        </div>
+
+        <div id="5LuikProject" class="row border bg-info">
+          <h2 class="text-center" style="padding-bottom: 25px; padding-top: 50px">5Luik Website</h2>
+          <img src="5luik Website Screenshot.png" class="img-fluid rounded" style="max-width:100%">
+          <p id="5LuikContext" class="text-center" style="padding-bottom: 10px; padding-top: 10px">My 5Luik is a website i build to present some of the projects i worked on in the first year and also my first time working with HTML and CSS.</p>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      <script>
+        function languageNederlands()
+        {
+          document.getElementById("aboutMe").innerHTML = "hey, mijn naam is Stan van Berkel. ik ben 20 jaar oud, Nederlands en een software development student bij het sintlucas. ik gebruik deze website die ik heb gemaakt om project en te laten zien waar ik aan heb gewerkt." ;
+          document.getElementById("cubathonContext").innerHTML = "Cubathon is een 3D platform abstacle game die ik heb gemaakt om unity te leren." ;
+          document.getElementById("5LuikContext").innerHTML = "Mijn 5Luik is een website die ik heb gebouwt om een aantal projecten van het eerste jaar te laren zien en om HTML en CSS te leren" ;
+        }
+        function languageEnglish()
+        {
+          document.getElementById("aboutMe").innerHTML = "hey, my name is Stan van Berkel. i am 20 years old, Dutch and a software development student at sintlucas. i use this website i made to show off some of the projects i worked on." ;
+          document.getElementById("cubathonContext").innerHTML = "Cubathon is a 3D platform obstacle course game i made to learn how to work with unity." ;
+          document.getElementById("5LuikContext").innerHTML = "My 5Luik is a website i build to present some of the projects i worked on in the first year and also my first time working with HTML and CSS." ;
+        }
+      </script>
+  </body>
+</html>
